@@ -55,7 +55,7 @@ public class DbConfig {
             hc.setUsername(username);
             hc.setPassword(password);
             var dataSource= new HikariDataSource(hc);
-            dataSource.setMaximumPoolSize(25); // 25 is a good enough data pool size, it is a database in a container after all
+            dataSource.setMaximumPoolSize(25);
             return dataSource;
         } catch (Exception e) {
             LOGGER.error("Hikari DataSource bean cannot be created!", e);
